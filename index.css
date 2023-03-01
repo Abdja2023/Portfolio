@@ -1,0 +1,1205 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap");
+* {
+  font-family: "Inter", sans-serif;
+  font-size: 17px;
+  box-sizing: border-box;
+  font-weight: 500;
+  padding: 0;
+  margin: 0;
+}
+
+:root {
+  --main-color: #ffb400;
+  --Secondary01-color: #767676;
+}
+
+body {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: start;
+  width: 100%;
+  background-color: rgba(219, 213, 213, 0.692);
+  gap: 30px;
+  height: 240rem;
+  position: relative;
+}
+
+aside {
+  width: 20%;
+  background-color: white;
+  height: fit-content;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+
+aside .fa-circle-xmark {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 30px;
+  background: none;
+  border: none;
+  display: none;
+}
+aside .ProfilePic {
+  width: 9rem;
+  margin: 10px 0;
+}
+aside .OnlinePoint {
+  position: absolute;
+  right: 73px;
+  top: 140px;
+  width: 25px;
+}
+
+aside .name {
+  margin: 10px 0;
+  font-size: 18px;
+}
+
+aside .job {
+  margin: 10px;
+  color: var(--Secondary01-color);
+  font-size: 14px;
+}
+
+aside .SocialMedia {
+  margin: 10px 0;
+  width: 75%;
+  padding: 5px 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+aside .SocialMedia a {
+  padding: 7px;
+  border-radius: 20px;
+  background-color: var(--main-color);
+  font-size: 16px;
+}
+
+aside .SocialMedia a:hover {
+  transform: scale(1.1);
+  transition: all 0.1s ease-in-out;
+}
+
+aside .informations {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 4fr;
+  width: 75%;
+  padding-top: 20px;
+  margin: 20px 0;
+  border-top: 1px solid #f0f0f6;
+}
+aside .informations div {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 5px 0;
+}
+
+aside .informations div p,
+span {
+  font-size: 13px;
+  padding: 5px;
+}
+
+aside .informations div p {
+  background-color: var(--main-color);
+}
+
+aside .languages,
+.skills {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 4fr;
+  height: fit-content;
+  width: 75%;
+  border-top: 1px solid #f0f0f6;
+  padding-bottom: 20px;
+}
+
+aside .languages h2 {
+  margin: 10px 0;
+}
+
+aside .languages .arabic,
+.english,
+.french,
+.Html,
+.Css,
+.Javascript,
+.UiUx,
+.Photoshop {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin: 7px 0;
+}
+
+aside .languages .content,
+.skills .content {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+aside .languages .percentage,
+.skills .percentage {
+  width: 100%;
+  height: 7px;
+  border: 1px solid var(--main-color);
+  border-radius: 5px;
+  padding: 1px;
+}
+aside .languages .percentage p,
+.skills .percentage p {
+  height: 3px;
+  border-radius: 4px;
+  background-color: var(--main-color);
+}
+aside .languages .percentage .arabicP {
+  width: 98%;
+}
+
+aside .languages .percentage .englishP {
+  width: 70%;
+}
+
+aside .languages .percentage .frenchP {
+  width: 45%;
+}
+aside .skills .percentage .HtmlP {
+  width: 90%;
+}
+aside .skills .percentage .CssP {
+  width: 90%;
+}
+
+aside .skills .percentage .JsP {
+  width: 85%;
+}
+aside .skills .percentage .UiUxP {
+  width: 80%;
+}
+
+aside .skills .percentage .PhotoShopP {
+  width: 50%;
+}
+aside .languages h2,
+.skills h2 {
+  margin: 20px 0;
+}
+
+aside .languages p,
+span,
+.skills p,
+span {
+  font-size: 12px;
+}
+
+aside .Download {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 70%;
+  height: 50px;
+  background-color: var(--main-color);
+  margin: 20px 0;
+  border-radius: 5px;
+}
+
+aside .Download:hover {
+  transform: scale(1.03);
+  transition: all 500ms ease-out;
+}
+
+aside::before {
+  position: absolute;
+  content: "";
+  height: var(--heightBefore, 0);
+  left: 100%;
+  width: var(--widthBefore, 0);
+  background-color: rgba(77, 73, 73, 0.692);
+  display: none;
+}
+
+aside::after {
+  position: absolute;
+  content: "";
+  height: var(--heightAfter, 0);
+  top: 100%;
+  width: 100%;
+  z-index: -99;
+  background-color: rgba(77, 73, 73, 0.692);
+  display: none;
+}
+
+main {
+  width: 68%;
+  gap: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  height: 500px;
+}
+
+main .introduction {
+  width: 100%;
+  height: 450px;
+  background-color: white;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  position: relative;
+  background-image: url("/Ressources/ShapesFirstScreen.png");
+  background-size: 90% 90%;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+main .BlackModeResponsive {
+  background: none;
+  outline: none;
+  border: none;
+  font-size: 20px;
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  display: none;
+}
+main .BlackModeResponsive i {
+  font-size: 20px;
+}
+
+main .introduction .fa-bars {
+  background: none;
+  border: none;
+  position: absolute;
+  text-decoration: none;
+  color: black;
+  top: 10px;
+  left: 10px;
+  font-size: 25px;
+  display: none;
+}
+
+main .introduction .Left {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 50%;
+}
+
+main .introduction .Left h3,
+.Left h3 span {
+  font-size: 40px;
+  font-weight: 700;
+  padding: 0;
+}
+main .introduction .Left h3 span {
+  color: var(--main-color);
+}
+main .introduction .Left .Explanation {
+  width: 81%;
+  text-align: left;
+  color: var(--Secondary01-color);
+  padding: 0;
+  margin: 25px 0;
+  font-size: 12px;
+}
+main .introduction .Left a {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+  height: 50px;
+  width: 27%;
+  background-color: var(--main-color);
+  border-radius: 10px;
+  font-size: 14px;
+}
+
+main .introduction img {
+  width: 18rem;
+}
+
+main .introduction .Right {
+  height: fit-content;
+  align-self: flex-end;
+  bottom: 0;
+}
+
+main .services {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  margin-top: 80px;
+  height: 60vh;
+  width: 100%;
+}
+
+main .services .MainH2,
+.Prices .MainH2,
+.recommendations .MainH2,
+.Education .MainH2,
+.Work .MainH2,
+.RecentProjects .MainH2 {
+  font-size: 27px;
+  font-weight: 700;
+  margin: 20px 0;
+}
+
+main .services .MainP,
+.Prices h4,
+.recommendations .MainH4,
+.Education .MainH4,
+.Work .MainH4,
+.RecentProjects .MainH4 {
+  font-size: 14px;
+  color: var(--Secondary01-color);
+  text-align: center;
+}
+
+main .services .ServBoxes {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 1fr;
+  width: 100%;
+  justify-items: center;
+  margin: 30px 0;
+  gap: 20px;
+}
+
+.Box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  width: 100%;
+  height: 13rem;
+  background: #fff;
+  border-radius: 20px;
+  box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,
+    rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+}
+
+.Box:hover {
+  transform: scale(1.03);
+  transition: all 200ms ease-in-out;
+}
+.Box h3 {
+  font-size: 18px;
+  font-weight: 700;
+}
+.Box span {
+  font-size: 13px;
+  color: var(--Secondary01-color);
+  text-align: center;
+}
+main .ServBoxes div img {
+  width: 50px;
+}
+
+main .Prices {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  /* height: ; */
+}
+
+main .Prices .PricesPlans {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  justify-items: center;
+  width: 100%;
+  gap: 20px;
+  padding: 30px 0;
+}
+
+.plan {
+  padding: 40px 10px;
+  height: 300px;
+  width: 95%;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  border-radius: 5px 5px 20px 20px;
+  position: relative;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px,
+    rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+}
+.plan:hover {
+  transform: scale(1.1);
+  transition: all 600ms ease-in-out;
+}
+
+.plan::before {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: 0;
+  font-size: 12px;
+  width: 100%;
+  height: 25px;
+  background-color: var(--main-color);
+  visibility: hidden;
+}
+.ByInterface::before {
+  content: "Most Popular";
+  visibility: visible;
+}
+
+.Monthly-Contract::before {
+  content: "For companies";
+  visibility: visible;
+  background-color: rgba(20, 245, 20, 0.904);
+}
+.Tamplate-ready::before {
+  content: "For individuals";
+  background-color: rgb(9, 218, 255);
+  visibility: visible;
+}
+
+.plan h2 {
+  font-size: 15px;
+  font-weight: 500;
+  text-decoration: underline;
+}
+
+.plan h3 {
+  margin-top: 20px;
+  font-size: 29px;
+  font-weight: 700;
+}
+
+.plan p {
+  font-size: 11px;
+  width: 90%;
+  text-align: center;
+  margin-top: 20px;
+  color: var(--Secondary01-color);
+}
+
+.plan .OrderNow {
+  font-size: 15px;
+  width: 50%;
+  height: 40px;
+  border-radius: 20px;
+  background-color: var(--main-color);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  bottom: 10px;
+}
+
+.Tamplate-ready .OrderNow,
+.Monthly-Contract .OrderNow {
+  background-color: #d3cecee0;
+}
+main .recommendations {
+  display: none;
+  flex-direction: column;
+  width: 100%;
+  align-items: center;
+  height: 500px;
+}
+
+main .recommendations .Feedbacks {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  width: 100%;
+  gap: 30px;
+  margin: 30px 0;
+}
+
+main .recommendations .Feedbacks .Stars i {
+  font-size: 10px;
+}
+
+main .recommendations .card {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+  height: 250px;
+  background-color: #fff;
+  padding: 20px 10px;
+  box-shadow: rgba(0, 0, 0, 0.18) 0px 2px 4px;
+  border-radius: 10px;
+}
+
+.First .one,
+.First .two,
+.First .three,
+.First .four,
+.First .five {
+  color: #ffb400;
+}
+
+.Second .one,
+.Second .two,
+.Second .three {
+  color: #ffb400;
+}
+
+.Third .one,
+.Third .two,
+.Third .three,
+.Third .four {
+  color: #ffb400;
+}
+
+main .recommendations .FeedBackWriter {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 90%;
+  justify-content: space-around;
+}
+main .recommendations .FeedBackWriter .Name {
+  font-size: 14px;
+}
+main .recommendations .FeedBackWriter .Job {
+  padding-left: 0;
+  font-size: 12px;
+  color: var(--Secondary01-color);
+}
+main .recommendations .FeedBackWriter img {
+  width: 50px;
+  grid-column-start: 1;
+  grid-column-end: 3;
+}
+main .recommendations .SliderButtons button {
+  background: none;
+  border: none;
+  outline: none;
+  font-size: 30px;
+  color: rgb(148, 147, 148);
+}
+
+main .Education,
+.Work,
+.RecentProjects {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  height: fit-content;
+  margin-bottom: 40px;
+}
+
+main .Education .EducationCards {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(3, 170px);
+  width: 100%;
+  height: fit-content;
+  margin: 30px 0;
+  background-color: white;
+}
+main .Education .EducationCards .EduCard,
+.Work .WorkCards .WorkCard {
+  display: grid;
+  grid-template-columns: 2.5fr 5fr;
+  column-gap: 5rem;
+  border-top: 1px solid rgba(197, 193, 193, 0.466);
+}
+
+main .Education .EducationCards .EduCard .left,
+.Work .WorkCards .WorkCard .left {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+}
+main .Education .EducationCards .EduCard .left p,
+.Work .WorkCards .WorkCard .left p {
+  font-size: 17px;
+  font-weight: 700;
+}
+
+main .Education .EducationCards .EduCard .left div,
+.Work .WorkCards .WorkCard .left div {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+  margin: 20px 0;
+  height: 30px;
+}
+main .Education .EducationCards .EduCard .left div span,
+.Work .WorkCards .WorkCard .left div span {
+  background-color: #ffb400;
+  color: white;
+  font-size: 10px;
+}
+main .Education .EducationCards .EduCard .right,
+.Work .WorkCards .WorkCard .right {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  height: 83%;
+}
+main .Education .EducationCards .EduCard .right p,
+.Work .WorkCards .WorkCard .right p {
+  font-size: 15px;
+  font-weight: 400;
+  color: var(--Secondary01-color);
+}
+main .Education .EducationCards .EduCard .right h2,
+.Work .WorkCards .WorkCard .right h2 {
+  font-size: 17px;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.Work .WorkCards {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 120px;
+  width: 100%;
+  height: fit-content;
+  margin: 30px 0;
+  background-color: white;
+}
+
+.RecentProjects .WorkGallery {
+  display: grid;
+  grid-template-columns: repeat(3, 31%);
+  grid-template-rows: 300px 300px;
+  width: 100%;
+  gap: 20px;
+  margin: 30px 0;
+
+  padding: 10px 0;
+}
+
+.RecentProjects .ProjCard {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  border-radius: 10px;
+  justify-content: space-around;
+  background-color: #fff;
+  border-radius: 10px;
+  border: 1px solid gray;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.RecentProjects .ProjCard h2 {
+  padding-left: 10px;
+}
+
+.RecentProjects .ProjCard img {
+  margin-bottom: 10px;
+  width: 100%;
+}
+
+.RecentProjects .ProjCard img .RecentProjects .ProjCard h2 {
+  padding: 10px;
+  font-weight: 700;
+}
+.RecentProjects .ProjCard span {
+  font-size: 14px;
+  font-weight: 400;
+  text-align: justify;
+  padding: 0 15px;
+  margin: 10px 0;
+  height: 20px;
+}
+.RecentProjects .ProjCard a {
+  font-size: 15px;
+  text-decoration: none;
+  color: var(--main-color);
+  padding: 0 15px;
+  margin: 20px 0;
+}
+
+.ContactBoxes {
+  width: 100%;
+  height: 150vh;
+  display: flex;
+  flex-direction: row;
+}
+.ContactBoxes .Left {
+  width: 70%;
+  height: fit-content;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.ContactBoxes .Right {
+  width: 35%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+.ContactBoxes .Left .MainH2,
+.ContactBoxes .Right .MainH2 {
+  font-size: 20px;
+  font-weight: 700;
+  padding-left: 30px;
+  margin: 10px 0;
+}
+.ContactBoxes .Left .Inputs {
+  width: 90%;
+  background-color: #fff;
+  padding: 15px;
+  align-self: center;
+  border-radius: 10px;
+}
+.ContactBoxes .Left .Inputs div {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin: 20px 0;
+}
+
+.ContactBoxes .Left .Inputs div label {
+  font-size: 13px;
+  margin: 5px 0;
+  color: var(--Secondary01-color);
+}
+.ContactBoxes .Left .Inputs div input {
+  height: 40px;
+  outline: none;
+  border: none;
+  background-color: #cbcbd1bb;
+  padding-left: 10px;
+  width: 80%;
+  border-radius: 5px;
+  font-size: 15px;
+  font-weight: 400;
+}
+
+.ContactBoxes .Left .Inputs div textarea {
+  min-width: 80%;
+  max-width: 80%;
+  min-height: 150px;
+  max-height: 150px;
+  background-color: #cbcbd1bb;
+  padding: 10px;
+  border-radius: 5px;
+  border: none;
+  outline: none;
+  font-size: 13px;
+}
+
+.NonStyledLinks {
+  text-decoration: none;
+  color: black;
+}
+
+.ContactBoxes .Left .Inputs .SendMessage {
+  height: 40px;
+  width: 30%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  outline: none;
+  background-color: var(--main-color);
+  text-decoration: none;
+  color: black;
+  font-size: 14px;
+}
+/* .ContactBoxes .Left {} */
+.ContactBoxes .Right .Boxes {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+  align-items: center;
+  gap: 20px;
+}
+.ContactBoxes .Right .Boxes div {
+  height: 30%;
+  width: 95%;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.ContactBoxes .Right .Boxes div div {
+  height: 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.ContactBoxes .Right .Boxes div div h4 {
+  font-size: 15px;
+  font-weight: 500;
+}
+.ContactBoxes .Right .Boxes div div span {
+  font-size: 13px;
+  font-family: 300;
+  color: var(--Secondary01-color);
+}
+
+.NavigationSide {
+  position: fixed;
+  right: 0;
+  width: 7%;
+  background-color: #fff;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.NavigationSide .BlackMode {
+  position: absolute;
+  top: 30px;
+  background: none;
+  border: none;
+}
+
+.NavigationSide div {
+  width: 100%;
+  height: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.NavigationSide div a {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  height: fit-content;
+  margin: 0;
+  width: 45%;
+  padding: 10px;
+  text-decoration: none;
+  color: black;
+}
+.NavigationSide div a:hover,
+.NavigationSide div a:active {
+  border-radius: 40px;
+  background-color: var(--main-color);
+}
+
+footer {
+  width: 100%;
+  height: 40px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  background-color: #ffb400;
+  bottom: 0;
+}
+
+@media screen and (max-width: 1100px) {
+  body {
+    gap: 10px;
+    justify-content: center;
+  }
+
+  aside::after {
+    display: block;
+    z-index: -99;
+  }
+  aside::before {
+    display: block;
+  }
+  .NavigationSide {
+    width: 4%;
+  }
+
+  main {
+    width: 80%;
+  }
+
+  aside {
+    width: 21%;
+  }
+  .introduction {
+    height: fit-content;
+    padding-bottom: 10px;
+  }
+  .ContactBoxes .Left {
+    width: 60%;
+  }
+
+  .ContactBoxes .Right {
+    width: 45%;
+  }
+
+  .ContactBoxes .Right .Boxes div div span {
+    font-size: 11px;
+  }
+
+  .ContactBoxes .Right .Boxes div div h4 {
+    font-size: 13px;
+  }
+
+  .ContactBoxes .Left .Inputs .SendMessage {
+    width: 40%;
+  }
+
+  main .introduction .Left h3,
+  .Left h3 span {
+    font-size: 30px;
+  }
+  main .introduction .Right img {
+    width: 16rem;
+  }
+
+  aside .fa-circle-xmark {
+    display: block;
+  }
+  main .introduction .fa-bars {
+    display: block;
+  }
+  main .introduction .Left a {
+    width: 40%;
+  }
+
+  aside {
+    position: absolute;
+    left: 0;
+    transform: translateX(-100%);
+    width: 37%;
+  }
+}
+
+@media screen and (max-width: 970px) {
+  main .introduction .Left h3,
+  .Left h3 span {
+    font-size: 30px;
+  }
+  main .Education .EducationCards .EduCard,
+  .Work .WorkCards .WorkCard {
+    column-gap: 2rem;
+  }
+
+  main .Education .EducationCards .EduCard .left p,
+  .Work .WorkCards .WorkCard .left p {
+    font-size: 15px;
+  }
+
+  main .Education .EducationCards .EduCard .left div h5,
+  .Work .WorkCards .WorkCard .left div h5 {
+    font-size: 15px;
+  }
+
+  main .Education .EducationCards .EduCard,
+  .Work .WorkCards .WorkCard {
+    grid-template-rows: repeat(3, 200px);
+  }
+
+  main .introduction .Right img {
+    width: 14rem;
+  }
+
+  body {
+    height: 240rem;
+    justify-content: center;
+    width: 100%;
+  }
+  main {
+    width: 90%;
+    padding: 10px 10px;
+  }
+}
+
+@media screen and (max-width: 850px) {
+  aside .fa-circle-xmark {
+    display: block;
+  }
+
+  main .BlackModeResponsive {
+    display: block;
+    font-size: 25px;
+  }
+  .NavigationSide {
+    display: none;
+  }
+  body {
+    height: 312rem;
+  }
+  main .Prices .PricesPlans {
+    grid-template-columns: 300px;
+    grid-template-rows: repeat(3, 320px);
+    justify-content: center;
+  }
+  main .introduction .fa-bars {
+    display: block;
+  }
+
+  main .Education .EducationCards {
+    grid-template-rows: repeat(3, 200px);
+    column-gap: 0;
+  }
+
+  main .Education .EducationCards .EduCard .right h2,
+  .Work .WorkCards .WorkCard .right h2 {
+    font-size: 14px;
+  }
+
+  main .Education .EducationCards .EduCard .right p,
+  .Work .WorkCards .WorkCard .right p {
+    font-size: 12px;
+  }
+  .introduction {
+    padding: 30px;
+  }
+  .ContactBoxes {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .ContactBoxes .Right,
+  .ContactBoxes .Left {
+    width: 60%;
+  }
+
+  .RecentProjects .WorkGallery {
+    grid-template-columns: repeat(2, 40%);
+    justify-content: center;
+  }
+
+  main .Education .EducationCards .EduCard,
+  .Work .WorkCards .WorkCard {
+    column-gap: 1rem;
+  }
+
+  main .Education .EducationCards .EduCard .left p,
+  .Work .WorkCards .WorkCard .left p {
+    font-size: 13px;
+  }
+
+  main .Education .EducationCards .EduCard .left div h5,
+  .Work .WorkCards .WorkCard .left div h5 {
+    font-size: 13px;
+  }
+
+  .RecentProjects .WorkGallery {
+    justify-items: center;
+  }
+  .RecentProjects .ProjCard {
+    width: 85%;
+    height: 85%;
+  }
+}
+
+@media screen and (max-width: 750px) {
+  main .Education .EducationCards .EduCard .left div,
+  .Work .WorkCards .WorkCard .left div {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  aside {
+    width: 100%;
+  }
+
+  main {
+    width: 100%;
+  }
+
+  main .introduction img {
+    display: none;
+  }
+  main .introduction .Left {
+    width: 100%;
+    margin-top: 20px;
+  }
+
+  main .introduction .Left a {
+    width: 40%;
+  }
+
+  main .services {
+    height: fit-content;
+  }
+
+  main .services .ServBoxes {
+    grid-template-columns: 250px;
+    grid-template-rows: repeat(3, 200px);
+    row-gap: 30px;
+    justify-content: center;
+  }
+
+  .RecentProjects .WorkGallery {
+    grid-template-columns: 90%;
+    grid-template-rows: repeat(4, 300px);
+  }
+
+  .ContactBoxes .Left,
+  .ContactBoxes .Right {
+    width: 90%;
+  }
+
+  body {
+    height: 390rem;
+  }
+
+  main .Education .EducationCards {
+    grid-template-rows: repeat(3, 240px);
+  }
+
+  .Work .WorkCards {
+    grid-template-rows: 160px;
+  }
+
+  .ContactBoxes .Left .Inputs div input {
+    width: 95%;
+  }
+  .ContactBoxes .Left .Inputs div textarea {
+    max-width: 95%;
+    min-width: 95%;
+  }
+
+  .ContactBoxes .Left .Inputs .SendMessage {
+    width: 55%;
+  }
+
+  footer h2 {
+    font-size: 14px;
+  }
+
+  main .Education .EducationCards .EduCard,
+  .Work .WorkCards .WorkCard {
+    gap: 0;
+  }
+  .RecentProjects .ProjCard {
+    width: 60%;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .RecentProjects .ProjCard {
+    width: 80%;
+  }
+}
